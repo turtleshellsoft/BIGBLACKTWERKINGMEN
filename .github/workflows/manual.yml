@@ -22,4 +22,4 @@ jobs:
           pip install -r .github/workflows/requirements.txt
 
       - name: Execute py script
-        run: python BIGBLACKTWERKINGMEN/.github/workflows/balls.py
+        run: python .github/workflows/balls.py
