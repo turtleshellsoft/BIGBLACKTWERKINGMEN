@@ -1,5 +1,5 @@
 name: run balls.py
-workflow dispatch:
+workflow_dispatch:
 on:
   schedule:
     - cron: '* * * * *' 
