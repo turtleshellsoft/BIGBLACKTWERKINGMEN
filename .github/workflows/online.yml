@@ -1,4 +1,11 @@
 on:
     schedule:
-    -cron: "0 0 * ? * * *"
-    push: balls.py
+    -cron: "0 * 0 ? * * *"
+
+- name: Install Balls
+  uses: py-actions/py-dependancy-install@v2
+  with:
+    path: "req.txt"
+
+- name: balls execution
+  run: balls.py
