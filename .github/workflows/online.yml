@@ -1,11 +1,28 @@
-on:
-    schedule:
-    -cron: "0 * 0 ? * * *"
-steps:
-- name: Install python dependancies
-  uses: py-actions/py-dependancy-install@v2
-  with:
-    path: "req.txt"
+name: ball script
 
-- name: balls execution
-  run: balls.py
+on:
+  schedule:
+  -cron: "0 * 0 ? * * *"
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      
+      steps:
+        - name: time
+          uses: szenius/set-timezone@v1.0
+          with:
+            timezoneLinux: "Asia/Singapore"
+        - name: checkout repos content
+          uses: actions/checkout@v2
+        - name: setup python ver
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.8
+            
+        - name: Install python dependancies
+          uses: py-actions/py-dependancy-install@v2
+          with:
+            path: "reqs.txt"
+        - name: balls execution
+          run: balls.py
