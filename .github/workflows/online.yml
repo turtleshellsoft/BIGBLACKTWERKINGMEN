@@ -1,8 +1,8 @@
 on:
     schedule:
     -cron: "0 * 0 ? * * *"
-
-- name: Install Balls
+steps:
+- name: Install python dependancies
   uses: py-actions/py-dependancy-install@v2
   with:
     path: "req.txt"
