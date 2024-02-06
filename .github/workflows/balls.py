@@ -1,4 +1,7 @@
+import subprocess
+subprocess.check_call(["python", "-m", "pip", "install", "requests"])
 import requests
+# rest of your script
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
 api_key = '68ed9af2-cfff-4261-b61a-6ae0f493fcb2'
